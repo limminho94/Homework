@@ -1,15 +1,20 @@
 #include <stdio.h>
 int max(void);
 int min(void);
+int oddEven(void);
+int three(void);
 
 int main()
 {
-    int n,m, n1;
+    int n,m;
     m = max();
     getchar();
-    printf("%d\n",m);
+    printf("최대값: %d\n",m);
     n = min();
-    printf("%d\n",n);
+    getchar();
+    printf("최소값: %d\n",n);
+    oddEven();
+    three();
 }
 
 int max(void)
@@ -42,4 +47,39 @@ int min(void)
         }
     }
     return min;
+}
+
+int oddEven(void)
+{
+    int n2;
+    printf("숫자를 입력하세요:");
+    scanf("%d", &n2);
+    if(n2 % 2 == 0)
+    {
+        printf("짝수\n");
+    }
+    else
+    {
+        printf("홀수\n");
+    }
+}
+
+int three(void)
+{
+    int n3;
+    printf("숫자를 입력하세요:");
+    scanf("%d", &n3);
+    if(n3 > 0 )
+    {
+        printf("양수\n");
+    }
+    else if (n3 < 0)
+    {
+        printf("음수\n");
+    }
+    else
+    {
+        printf("0\n");
+    }
+    
 }

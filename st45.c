@@ -3,7 +3,7 @@
 int main()
 {
     int i,j,k,a;
-    int arr[5][5] ={ {},{},{},{},{} };
+    int arr[5][5];
     a = 1;
     for(i=1;i<=5;i++)
     {
@@ -11,9 +11,10 @@ int main()
         {
             printf("   ");
         }
-        for(k=0; k<i; k++)
+        for(j=0; j<i; j++)
         {
-            printf("%2d ",a);
+            arr[i][j] = a;
+            printf("%2d ",arr[i][j]);
             a = a + 1 ;
         }
         printf("\n");
