@@ -9,7 +9,7 @@ int res(int win, int draw, int los);
 
 int main()
 {
-    int i,num,com,userNum, comNum,win,draw,los;
+    int num,com,userNum, comNum,win,draw,los;
     
     while(1)
     {
@@ -18,14 +18,14 @@ int main()
         printf("사용자는 %d를 냈습니다.\n", userNum);
         printf("컴퓨터는 %d를 냈습니다.\n", comNum);
         vs(userNum,comNum);
-        win = vs(userNum,comNum);
-    
+        
+        
     }
 }
 
 int user(int num)
 {
-    int r,s,p,win,draw,los;
+    int r,s,p,e,win,draw,los,userNum,comNum;
     while(1)
     {
         printf(">>> 가위(1) 바위(2) 보(3) 입력 : ");
@@ -49,9 +49,9 @@ int user(int num)
         else if(num == 0)
         {
             res(win,draw,los);
-            break;
         }
         else
+
         {
             printf("다시 입력하세요\n");
             continue;
@@ -70,27 +70,21 @@ int computer(int com)
 
 int vs(int userNum, int comNum)
 {
-    int win, draw,los;
-    win = 0;
-    draw = 0;
-    los = 0;
+    
     if(userNum > comNum)
     {
         printf("이겼습니다.\n");
-        win = win + 1;
-        return win;
+        return 1;
     }
     else if(userNum == comNum)
     {
         printf("무승부입니다.\n");
-        draw = draw + 1;
-        return draw;
+        return 1;
     }
     else
     {
         printf("졌습니다.\n");
-        los = los + 1;
-        return los;
+        return 1;
     }
     printf("\n");
     
@@ -100,10 +94,11 @@ int vs(int userNum, int comNum)
 
 int res(int win, int draw, int los)
 {
-    
-    printf("[종합 결과]");
-    printf("> 승 : %d", win);
-    printf("> 무 : %d", draw);
-    // printf("> 패 : %d", los);
+
+    printf("[종합 결과]\n");
+    printf("> 승 : %d\n", win);
+    printf("> 무 : %d\n", draw);
+    printf("> 패 : %d\n", los);
+    printf("계속하려면 아무 키나 누르십시오...\n");
     
 }
