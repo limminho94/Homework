@@ -4,10 +4,10 @@ int main()
 {
     int a,b;
     scanf("%d%d", &a, &b);
-    printf("입력받은 값:%d %d", a, b);
+    printf("입력받은 값:%d %d\n", a, b);
     if (a > b)
-        printf("a: %d\n", a);
+        printf("큰 수: %d\n", a);
     else 
-        printf("b: %d\n", b);
+        printf("작은 수: %d\n", b);
     
 }
